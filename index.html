@@ -58,7 +58,7 @@
 
 <p>CRUD表も、現代のクラウドデータベースのパフォーマンス問題を洗い出すときに役にたつという話も聞きます。どでかいデータを持つテーブルに大量データをスキャンするようなクエリーを投げていると問題になりがちなので、テーブルに対してだれが処理を投げているかがわかれば、だいたい当たりはつきますしね。</p>
 <p>あと、余談ですが、　ReactアプリケーションのuseEffectとuseStateの連鎖も、DFDで表現すると綺麗にいけるんじゃないかな、というのも最近ぼんやり考えているところです。あとで紹介するSQL生成ツールは<a href="https://future-architect.github.io/articles/20221024a/">ウェブインターフェイス</a>をReactで作ったのですが、そのフックの関係をDFDで図示するとこんな感じです。useState&#x2F;useRefのストアと、useCallback&#x2F;useEffectのプロセスで表現できますね。テキスト入力はuncontrolled、コンボボックスはcontrolled、青線は生成したデータをURLに反映してシェアできる仕組み・・・みたいにうまく設計情報が反映できていますよね？</p>
-![Test Image 6](https://masakitakuya2002.github.io/f01.github.io/bochoalarm.png)
+<img src="https://masakitakuya2002.github.io/f01.github.io/bochoalarm.png" alt="react-dfd.png" width="831" height="524" loading="lazy">
 
 
 <h1 id="そろそろSQL嫌いを卒業する時期が来たのではないか"><a href="#そろそろSQL嫌いを卒業する時期が来たのではないか" class="headerlink" title="そろそろSQL嫌いを卒業する時期が来たのではないか"></a>そろそろSQL嫌いを卒業する時期が来たのではないか</h1><p>僕自身はMongoDBだったりの案件が多く、RDBを直接扱う経験は数えるほどしかなく、経験値が足りないな、というのは実感していました。アプリ作るときもORマッパーを使ったりもしていましたが、どうも動きが気に入らなくて、直接コントロールしたいな、と思うことの方が増えてきています。</p>
